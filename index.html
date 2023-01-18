@@ -13,18 +13,18 @@
 <body>
 
   <aside class="mobile-sidebar">
-    <ul class="steps">
+    <ul class="nav nav-tabs steps" role="tablist">
       <li class="link-item active">
-        <div class="step-number">1</div>
+        <a id="first-tab" class="step-number" onclick="switchTab('first-content', this)">1</a>
       </li>
       <li class="link-item">
-        <div class="step-number">2</div>
+        <a id="second-tab" class="step-number" onclick="switchTab('second-content', this)">2</a>
       </li>
       <li class="link-item">
-        <div class="step-number">3</div>
+        <a id="third-tab" class="step-number">3</a>
       </li>
       <li class="link-item">
-        <div class="step-number">4</div>
+        <a id="fourth-tab" class="step-number">4</a>
       </li>
     </ul>
   </aside>
@@ -66,7 +66,7 @@
     <!-- Sidebar end -->
 
     <div class="content">
-      <div class="step-one">
+      <div id="first-content" class="step-one tab-content" >
         <h2 class="title">Personal info</h2>
         <p class="description">Please provide your name, email address, and phone number.</p>
 
@@ -95,10 +95,17 @@
         </form>
       </div>
 
+      <div id="second-content" class="step-two tab-content" style="display: none;">
+        fasdsada
+      </div>
+
       <div class="prev-next-wrapper">
         <button class="next-step">Next Step</button>
       </div>
     </div>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
